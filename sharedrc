@@ -195,3 +195,12 @@ ccwf \
 -Wcast-align \
 -Wwrite-strings \
 -Waggregate-return" # (c)ompile (C) (s)trict (f)lags
+
+# slurm cluster stuff
+alias sqall="squeue"
+alias sqme="squeue -u s1234567"
+alias sqinfo="sinfo --all"
+alias sqrun1="srun --cpus-per-task=1 --pty bash"
+alias sqrun2="srun --cpus-per-task=2 --pty bash"
+alias sqrun3="srun --cpus-per-task=3 --pty bash"
+alias sqrun4="srun --cpus-per-task=4 --pty bash"
