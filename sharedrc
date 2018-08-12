@@ -21,7 +21,10 @@ alias offdebug='SBT_OPTS="$SBT_OPTS_VAL"'
 
 # - NODE VERSION MANAGER -
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+
+engage-nvm() {
+  . "/usr/local/opt/nvm/nvm.sh"
+}
 
 export FZF_DEFAULT_OPTS="--height 40% --reverse --border --ansi --preview 'head -32 {}'"
 
