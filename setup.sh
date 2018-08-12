@@ -19,10 +19,10 @@ brew cask install virtualbox
 ####################
 brew cask install java
 
-brew install yarn nvm haskell-stack scala sbt ammonite-repl leiningen nim pipenv
+brew install yarn nvm haskell-stack scala sbt ammonite-repl leiningen nim pipenv go rustup-init
 
 # The Rust community should be shot for this
-curl https://sh.rustup.rs -sSf | sh
+# curl https://sh.rustup.rs -sSf | sh
 
 
 #############
@@ -59,7 +59,7 @@ brew cask install mactex
 #######
 # CLI # 
 #######
-brew install pandoc gitless wget ranger screenfetch tmux the_silver_searcher ripgrep lnav q jq gron trash tig rtv exa ccat m-cli entr fpp fzf fd fzy tokei httpie pup loc telnet shellcheck
+brew install pandoc gitless wget ranger screenfetch tmux ripgrep lnav q jq gron trash tig exa ccat m-cli entr fpp fzf fd fzy tokei httpie pup loc telnet shellcheck
 
 #########
 # SHELL # 

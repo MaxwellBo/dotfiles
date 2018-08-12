@@ -4,7 +4,6 @@
     # ~/.dotfiles: ''
     # ~/.vim: vim/
     # ~/.vimrc: vimrc
-    # EDITORS
     ~/.config/nvim/init.vim:
       path: nvim.vim
       create: true
@@ -31,7 +30,6 @@
       create: true
       relink: true
       force: true
-    # TERMINAL MANAGEMENT
     ~/.tmux.conf:
       path: tmux.conf
       relink: true
@@ -41,7 +39,6 @@
       create: true
       relink: true
       force: true
-    # SHELL
     ~/.bash_profile:
       path: bash_profile
       relink: true
@@ -58,7 +55,6 @@
       path: config.fish
       relink: true
       force: true
-    # GIT
     ~/.gitconfig:
       path: gitconfig
       relink: true
@@ -69,6 +65,10 @@
       force: true
     ~/.git-commit-template:
       path: git-commit-template
+      relink: true
+      force: true
+    ~/.wtf/config.yml:
+      path: wtf.config.yml 
       relink: true
       force: true
 

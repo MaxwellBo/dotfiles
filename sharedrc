@@ -68,6 +68,8 @@ if [ -x "$(command -v ccat)" ]; then
    alias cat='ccat --bg="dark"'
 fi
 
+alias cdw='fasd -e cd'
+
 #########
 # UTILS #
 #########

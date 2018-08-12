@@ -1,0 +1,97 @@
+wtf:
+  colors:
+    border:
+      focusable: darkslateblue
+      focused: orange
+      normal: gray
+  grid:
+    columns: [40, 40]
+    rows: [13, 13, 4]
+  refreshInterval: 1
+  mods:
+    clocks:
+      colors:
+        rows:
+          even: "lightblue"
+          odd: "white"
+      enabled: true
+      locations:
+        Brisbane: "Australia/Brisbane"
+        Sydney: "Australia/Sydney"
+        UTC: "Etc/UTC"
+      position:
+        top: 0
+        left: 0
+        height: 1
+        width: 1
+      refreshInterval: 15
+      sort: "alphabetical"
+    security:
+      enabled: true
+      position:
+        top: 1
+        left: 0
+        height: 1
+        width: 1
+      refreshInterval: 3600
+    status:
+      enabled: true
+      position:
+        top: 2
+        left: 0
+        height: 1
+        width: 2
+      refreshInterval: 1
+    system:
+      enabled: true
+      position:
+        top: 0
+        left: 1
+        height: 1
+        width: 1
+      refreshInterval: 3600
+    power:
+      enabled: true
+      position:
+        top: 5
+        left: 0
+        height: 2
+        width: 1
+      refreshInterval: 60
+    git:
+      commitCount: 5
+      enabled: true
+      position:
+        top: 0
+        left: 2
+        height: 1
+        width: 1
+      refreshInterval: 120
+      repositories:
+      - "/Users/Max/work/skedulomobile"
+      - "/Users/Max/work/phoenix"
+    # weather:
+    #   # From http://openweathermap.org/help/city_list.txt
+    #   cityids:
+    #     - 2174003
+    #     - 2147714
+    #   colors:
+    #     current: "lightblue"
+    #   enabled: true
+    #   language: "EN"
+    #   position:
+    #     top: 0
+    #     left: 2
+    #     height: 1
+    #     width: 1
+    #   refreshInterval: 900
+    #   tempUnit: "C"
+    textfile:
+      enabled: true
+      filePath: "/Users/Max/notes.md"
+      position:
+        top: 1
+        left: 1
+        height: 1
+        width: 1
+      refreshInterval: 30

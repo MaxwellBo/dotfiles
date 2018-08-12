@@ -25,7 +25,7 @@ call plug#begin('~/.vim/plugged')
     vnoremap <Leader>s :SpeakRangeDetail<cr>
     vnoremap <Leader>d :SpeakRangeExplain<cr>
 
-    Plug 'kshenoy/vim-signature' " Put markers in sidebar
+    Plug 'kshenoy/vim-signature' " Display markers in sidebar
 
     Plug 'ap/vim-css-color' " Hex code colour highlighting (fast fork)
 
@@ -33,19 +33,47 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'Raimondi/delimitMate' " Auto close brackets
 
-    Plug 'easymotion/vim-easymotion' " Fast jumping
-
     Plug 'terryma/vim-multiple-cursors' " `<C-n>` TODO: Make this <C-d>
 
-    Plug 'tomtom/tcomment_vim' " Comment highlighted with `gc`
-    " or commentary.vim
-
     Plug 'tommcdo/vim-exchange' " Exchange lines with `cx`, and 'X' in visual mode
+    " cx - On the first use, define the first {motion} to exchange. On the second use, define the second {motion} and perform the exchange.
+    " cxx - Like cx, but use the current line.
+    " X - Like cx, but for Visual mode.
+    " cxc - Clear any {motion} pending for exchange.
 
-    Plug 'tpope/vim-surround' " Replace surroundings with cs(from)(to), delete surroundings with ds(char), add surroundings with y(object)(char)
     " Plug 'tpope/vim-repeat'
     
     Plug 'godlygeek/tabular' " :Tab/<character to align on>
+
+    " --- EMULATED IN VSCODE --- "
+    "
+    Plug 'tomtom/tcomment_vim'
+    " gc - toggles line comment. 
+    " For example gcc to toggle line comment for current line and gc2j to toggle line comments for the current line and the next two lines.
+    " gC - toggles block comment. 
+    " For example gCi) to comment out everything within parenthesis.
+
+    Plug 'tpope/vim-surround' 
+    " Replace surroundings with cs(from)(to), delete surroundings with ds(char), add surroundings with y(object)(char)
+    " d s <existing char>	Delete existing surround
+    " c s <existing char> <desired char>	Change surround existing to desired
+    " y s <motion> <desired char>	Surround something with something using motion (as in 'you surround')
+    " S <desired char>	Surround when in visual modes (surrounds full selection)
+
+    Plug 'easymotion/vim-easymotion'
+    " <leader><leader><motion>
+
+    Plug 'michaeljsmith/vim-indent-object'
+    " <operator>ii	This indentation level
+    " <operator>ai	This indentation level and the line above (think if statements in Python)
+    " <operator>aI	This indentation level, the line above, and the line after (think if statements in C/C++/Java/etc)
+
+    Plug 'justinmk/vim-sneak'
+    let g:sneak#label = 1
+    " s<char><char>	Move forward to the first occurence of <char><char>
+    " S<char><char>	Move backward to the first occurence of <char><char>
+    " <operator>z<char><char>	Perform <operator> forward to the first occurence of <char><char>
+    " <operator>Z<char><char>	Perform <operator> backward to the first occurence of <char><char>
 
 " WORKFLOW SUPPORT
     " Plug 'cloudhead/neovim-fuzzy' " Fast file open
@@ -72,6 +100,7 @@ call plug#begin('~/.vim/plugged')
     "     set noshowmode
     "     let g:airline_powerline_fonts = 1
         " set guifont=Liberation\ Mono\ for\ Powerline\ 10
+
     Plug 'itchyny/lightline.vim'
     " let g:lightline = {
     "       \ 'colorscheme': 'wombat',
@@ -80,28 +109,23 @@ call plug#begin('~/.vim/plugged')
     " Plug 'Yggdroot/indentLine' " Indent flagging 
         " let g:indentLine_char = '·'
     
-    " Plug 'noahfrederick/vim-noctu' " Terminal dependent schemes
-    " Plug 'zeis/vim-kolor'
-
     Plug 'morhetz/gruvbox' " The One True Scheme
-
     " Plug 'NLKNguyen/papercolor-theme'
     " Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
     " Plug 'endel/vim-github-colorscheme'
 
 " SYNTAX / LINTING
-    Plug 'sheerun/vim-polyglot'
+    Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
+    Plug 'derekwyatt/vim-scala'
+    Plug 'marconilanna/REPLesent', {'rtp': 'vim/'}
 
-    " Plug 'benekastah/neomake'
-
-    Plug 'tpope/vim-sleuth'
+    Plug 'tpope/vim-sleuth' "automatically adjusts 'shiftwidth' and 'expandtab' heuristically
         set tabstop=4
         " set softtabstop=4
         " set shiftwidth=4
         " set expandtab
-        "
-    Plug 'derekwyatt/vim-scala'
-    Plug 'marconilanna/REPLesent', {'rtp': 'vim/'}
+
+    " Plug 'benekastah/neomake'
     
 " COMPLETION
     " Plug 'ervandew/supertab'
