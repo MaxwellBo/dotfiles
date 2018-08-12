@@ -1,3 +1,4 @@
+
 #######
 # ENV #
 #######
@@ -83,9 +84,9 @@ github-clone() {
 # https://stackoverflow.com/a/25620447/5835579
 alias xmlextract="sed -e 's/<[^>]\{1,\}>//g; s/[^[:print:]]\{1,\}//g'"
 
-docx() { unzip -p $1 word/document.xml | xmlextract }
+docx() { unzip -p "$1" word/document.xml | xmlextract; }
 
-docxn() { unzip -p $1 word/document.xml | sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\}>//g; s/[^[:print:]\n]\{1,\}//g' }
+docxn() { unzip -p "$1" word/document.xml | sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\}>//g; s/[^[:print:]\n]\{1,\}//g'; }
 
 ###############
 # FAT FINGERS #
@@ -97,7 +98,7 @@ alias rgl="rg --fixed-strings" # Treat the pattern as a literal string instead o
 alias clip-copy="pbcopy"
 alias clip-paste="pbpaste"
 alias fff="fzf"
-ffv() { vim $(fzf) }
+ffv() { vim "$(fzf)"; }
 
 
 ##########
