@@ -12,6 +12,7 @@ brew cask # initializes
 # CONTAINERIZATION #
 ####################
 brew install docker
+brew cask install virtualbox
 
 ####################
 # LANGUAGE TOOLING #
@@ -21,7 +22,7 @@ brew cask install java
 brew install yarn nvm haskell-stack scala sbt ammonite-repl leiningen nim pipenv go rustup-init
 
 # The Rust community should be shot for this
-curl https://sh.rustup.rs -sSf | sh
+# curl https://sh.rustup.rs -sSf | sh
 
 
 #############
@@ -58,7 +59,7 @@ brew cask install mactex
 #######
 # CLI # 
 #######
-brew install pandoc gitless wget ranger screenfetch tmux ripgrep lnav q jq gron trash tig exa ccat m-cli entr fpp fzf fd fzy tokei httpie pup loc telnet diff-so-fancy htop ncdu bat prettyping 
+brew install pandoc gitless wget ranger screenfetch tmux ripgrep lnav q jq gron trash tig exa ccat m-cli entr fpp fzf fd fzy tokei httpie pup loc telnet diff-so-fancy htop ncdu bat prettyping shellcheck
 
 #########
 # SHELL # 

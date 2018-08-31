@@ -88,9 +88,15 @@
         "suppressWelcomeNotice": true
     },
     "latex-workshop.view.pdf.viewer": "tab",
+    "gitlens.gitExplorer.files.layout": "auto",
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.activeBackground": "#666666"
+    },
+    "window.openFoldersInNewWindow": "on",
+    "gitlens.historyExplorer.enabled": true,
     "eppz-code.disableAnalytics": true,
     "csharp.referencesCodeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.enabled": false,
-    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false
 }

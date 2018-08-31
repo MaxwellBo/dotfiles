@@ -137,9 +137,9 @@ call plug#begin('~/.vim/plugged')
     " Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
         " Plug 'rdnetto/YCM-Generator'
     
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-        let g:deoplete#enable_at_startup = 1
-        let g:python3_host_prog = "/usr/local/bin/python3"
+    " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+        " let g:deoplete#enable_at_startup = 1
+        " let g:python3_host_prog = "/usr/local/bin/python3"
 
 
 " VIM COMPATABILITY

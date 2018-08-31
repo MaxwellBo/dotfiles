@@ -1,3 +1,4 @@
+
 #######
 # ENV #
 #######
@@ -20,7 +21,10 @@ alias offdebug='SBT_OPTS="$SBT_OPTS_VAL"'
 
 # - NODE VERSION MANAGER -
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+
+engage-nvm() {
+  . "/usr/local/opt/nvm/nvm.sh"
+}
 
 export FZF_DEFAULT_OPTS="--height 40% --reverse --border --ansi --preview 'head -32 {}'"
 
@@ -102,9 +106,9 @@ github-clone() {
 # https://stackoverflow.com/a/25620447/5835579
 alias xmlextract="sed -e 's/<[^>]\{1,\}>//g; s/[^[:print:]]\{1,\}//g'"
 
-docx() { unzip -p $1 word/document.xml | xmlextract }
+docx() { unzip -p "$1" word/document.xml | xmlextract; }
 
-docxn() { unzip -p $1 word/document.xml | sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\}>//g; s/[^[:print:]\n]\{1,\}//g' }
+docxn() { unzip -p "$1" word/document.xml | sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\}>//g; s/[^[:print:]\n]\{1,\}//g'; }
 
 ###############
 # FAT FINGERS #
@@ -116,7 +120,7 @@ alias rgl="rg --fixed-strings" # Treat the pattern as a literal string instead o
 alias clip-copy="pbcopy"
 alias clip-paste="pbpaste"
 alias fff="fzf"
-ffv() { vim $(fzf) }
+ffv() { vim "$(fzf)"; }
 
 # https://remysharp.com/2018/08/23/cli-improved
 alias preview="fzf --preview 'bat --color \"always\" {}'"
@@ -212,3 +216,12 @@ ccwf \
 -Wcast-align \
 -Wwrite-strings \
 -Waggregate-return" # (c)ompile (C) (s)trict (f)lags
+
+# slurm cluster stuff
+alias sqall="squeue"
+alias sqme="squeue -u s1234567"
+alias sqinfo="sinfo --all"
+alias sqrun1="srun --cpus-per-task=1 --pty bash"
+alias sqrun2="srun --cpus-per-task=2 --pty bash"
+alias sqrun3="srun --cpus-per-task=3 --pty bash"
+alias sqrun4="srun --cpus-per-task=4 --pty bash"
