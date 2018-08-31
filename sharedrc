@@ -67,6 +67,23 @@ if [ -x "$(command -v ccat)" ]; then
    alias cat='ccat --bg="dark"'
 fi
 
+# https://remysharp.com/2018/08/23/cli-improved
+if [ -x "$(command -v htop)" ]; then
+   alias top='sudo htop'
+fi
+
+if [ -x "$(command -v prettyping)" ]; then
+   alias ping='prettyping --nolegend'
+fi
+
+if [ -x "$(command -v ncdu)" ]; then
+   alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
+fi
+
+if [ -x "$(command -v fd)" ]; then
+   alias fd='find'
+fi
+
 alias cdw='fasd -e cd'
 
 #########
@@ -100,6 +117,10 @@ alias clip-copy="pbcopy"
 alias clip-paste="pbpaste"
 alias fff="fzf"
 ffv() { vim $(fzf) }
+
+# https://remysharp.com/2018/08/23/cli-improved
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"<Paste>
 
 
 ##########

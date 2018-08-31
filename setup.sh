@@ -58,7 +58,7 @@ brew cask install mactex
 #######
 # CLI # 
 #######
-brew install pandoc gitless wget ranger screenfetch tmux ripgrep lnav q jq gron trash tig exa ccat m-cli entr fpp fzf fd fzy tokei httpie pup loc telnet
+brew install pandoc gitless wget ranger screenfetch tmux ripgrep lnav q jq gron trash tig exa ccat m-cli entr fpp fzf fd fzy tokei httpie pup loc telnet diff-so-fancy htop ncdu bat prettyping 
 
 #########
 # SHELL # 
