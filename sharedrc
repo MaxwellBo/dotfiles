@@ -3,6 +3,11 @@
 # ENV #
 #######
 
+precmd() {
+  # sets the tab title to current dir
+  echo -ne "\e]1;${PWD##*/}\a"
+}
+
 # - SCALA BUILD TOOL -
 # Tell sbt to not use any other repositories than the ones specified in ~/.sbt/repositories
 SBT_OPTS_VAL="-Dsbt.override.build.repos=true"
@@ -26,26 +31,34 @@ engage-nvm() {
   . "/usr/local/opt/nvm/nvm.sh"
 }
 
+engage-rbenv() {
+  eval "$(rbenv init -)"
+}
+
+engage-rvm() {
+  source /Users/Max/.rvm/scripts/rvm
+}
+
+#######
+# FZF #
+#######
+
 export FZF_DEFAULT_OPTS="--height 40% --reverse --border --ansi --preview 'head -32 {}'"
 
 export FZF_DEFAULT_COMMAND='fd --type file --follow --color=always --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+ffv() { vim "$(fzf)"; }
 
-# if [ -x "$(command -v rbenv)" ]; then
-#   eval "$(rbenv init -)"
+# https://remysharp.com/2018/08/23/cli-improved
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+
+# if [ -x "$(command -v fzf)" ]; then
+#   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#   [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # fi
 
-# if [ -x "$(command -v rvm)" ]; then
-#   source /Users/Max/.rvm/scripts/rvm
-# fi
-
-precmd() {
-  # sets the tab title to current dir
-  echo -ne "\e]1;${PWD##*/}\a"
-}
 
 ############
 # DROP-INS #
@@ -120,12 +133,6 @@ alias rgl="rg --fixed-strings" # Treat the pattern as a literal string instead o
 alias clip-copy="pbcopy"
 alias clip-paste="pbpaste"
 alias fff="fzf"
-ffv() { vim "$(fzf)"; }
-
-# https://remysharp.com/2018/08/23/cli-improved
-alias preview="fzf --preview 'bat --color \"always\" {}'"
-export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"<Paste>
-
 
 ##########
 # FIXES ##
