@@ -43,22 +43,20 @@ engage-rvm() {
 # FZF #
 #######
 
-export FZF_DEFAULT_OPTS="--height 40% --reverse --border --ansi --preview 'head -32 {}'"
-
+# https://github.com/junegunn/fzf
+# https://remysharp.com/2018/08/23/cli-improved
+export FZF_DEFAULT_OPTS="--height 40% --reverse --border --ansi --preview 'head -32 {}' --bind='ctrl-o:execute(code {})+abort'"
 export FZF_DEFAULT_COMMAND='fd --type file --follow --color=always --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-ffv() { vim "$(fzf)"; }
-
-# https://remysharp.com/2018/08/23/cli-improved
-alias preview="fzf --preview 'bat --color \"always\" {}'"
-export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 # if [ -x "$(command -v fzf)" ]; then
 #   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #   [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # fi
 
+ffv() { vim "$(fzf)"; }
+alias fff="fzf"
+alias preview="fzf --preview 'bat --color \"always\" {}'"
 
 ############
 # DROP-INS #
@@ -86,7 +84,8 @@ fi
 
 # https://remysharp.com/2018/08/23/cli-improved
 if [ -x "$(command -v htop)" ]; then
-   alias top='sudo htop'
+    alias top='sudo htop'
+    alias htopp="sudo htop --delay=300"
 fi
 
 if [ -x "$(command -v prettyping)" ]; then
@@ -108,7 +107,6 @@ alias cdw='fasd -e cd'
 #########
 
 alias subf="subl --command toggle_full_screen" # (sub)lime (f)ullscreen
-alias htopp="sudo htop --delay=300"
 alias begone-thot="rm -rf"
 alias ydsh="yarn run dev-server-hot"
 
@@ -132,7 +130,6 @@ alias rgrep="rg"
 alias rgl="rg --fixed-strings" # Treat the pattern as a literal string instead of a regular expression
 alias clip-copy="pbcopy"
 alias clip-paste="pbpaste"
-alias fff="fzf"
 
 ##########
 # FIXES ##
