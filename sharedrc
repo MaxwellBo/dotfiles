@@ -20,22 +20,20 @@ export SBT_CREDENTIALS="$HOME/.ivy2/.credentials"
 alias ondebug='export SBT_OPTS="$SBT_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"'
 alias offdebug='SBT_OPTS="$SBT_OPTS_VAL"'
 
-# - RUSTUP -
-# Find where Rust should be
-# source $HOME/.cargo/env
+enable-rustup() {
+  source $HOME/.cargo/env
+}
 
-# - NODE VERSION MANAGER -
 export NVM_DIR="$HOME/.nvm"
-
-engage-nvm() {
+enable-nvm() {
   . "/usr/local/opt/nvm/nvm.sh"
 }
 
-engage-rbenv() {
+enable-rbenv() {
   eval "$(rbenv init -)"
 }
 
-engage-rvm() {
+enable-rvm() {
   source /Users/Max/.rvm/scripts/rvm
 }
 
