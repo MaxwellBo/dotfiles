@@ -95,7 +95,7 @@ if [ -x "$(command -v ncdu)" ]; then
 fi
 
 if [ -x "$(command -v fd)" ]; then
-   alias fd='find'
+   alias find='fd'
 fi
 
 alias cdw='fasd -e cd'
