@@ -98,5 +98,6 @@
     "csharp.referencesCodeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.enabled": false,
-    "gitlens.hovers.currentLine.enabled": false
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line"
 }
