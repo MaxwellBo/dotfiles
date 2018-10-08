@@ -12,18 +12,18 @@ call plug#begin('~/.vim/plugged')
 
 " EDITING HELP
     
-    " Plug 'MaxwellBo/neoreader'
-    " let g:enable_at_startup = 0
-    " let g:speak_keypresses = 0
-    " let g:speak_mode_transitions = 0
-    " let g:interpret_generic_infix = 1
-    " let g:auto_speak_line = 0
-    " nnoremap <Leader>q :SpeakLine<cr>
-    " nnoremap <Leader>w :SpeakLineDetail<cr>
-    " nnoremap <Leader>e :SpeakLineExplain<cr>
-    " vnoremap <Leader>a :SpeakRange<cr>
-    " vnoremap <Leader>s :SpeakRangeDetail<cr>
-    " vnoremap <Leader>d :SpeakRangeExplain<cr>
+    Plug 'MaxwellBo/neoreader'
+    let g:enable_at_startup = 0
+    let g:speak_keypresses = 0
+    let g:speak_mode_transitions = 0
+    let g:interpret_generic_infix = 1
+    let g:auto_speak_line = 0
+    nnoremap <Leader>q :SpeakLine<cr>
+    nnoremap <Leader>w :SpeakLineDetail<cr>
+    nnoremap <Leader>e :SpeakLineExplain<cr>
+    vnoremap <Leader>a :SpeakRange<cr>
+    vnoremap <Leader>s :SpeakRangeDetail<cr>
+    vnoremap <Leader>d :SpeakRangeExplain<cr>
 
     Plug 'kshenoy/vim-signature' " Display markers in sidebar
 
