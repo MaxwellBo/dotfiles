@@ -14,16 +14,13 @@
         "comments": true,
         "strings": true
     },
-    "editor.smoothScrolling": true,
     "editor.stablePeek": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
-    "editor.formatOnPaste": true,
     "editor.renderControlCharacters": true,
     "files.autoSave": "onFocusChange",
     "window.newWindowDimensions": "fullscreen",
     "window.openFoldersInNewWindow": "on",
-    "window.zoomLevel": 0,
     "window.closeWhenEmpty": false,
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
@@ -33,7 +30,6 @@
     "workbench.startupEditor": "none",
     "workbench.editor.swipeToNavigate": true,
     "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.tabSizing": "shrink",
     "vim.easymotion": true,
     "vim.sneak": true,
@@ -98,5 +94,10 @@
     "csharp.referencesCodeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.enabled": false,
-    "gitlens.hovers.currentLine.enabled": false
+    "gitlens.hovers.currentLine.enabled": false,
+    "breadcrumbs.enabled": true,
+    "editor.smoothScrolling": true,
+    "editor.suggest.localityBonus": true,
+    "editor.tabCompletion": "on",
+    "tabnine.disable_file_regex": ["[.]cs$", "[.]xaml$"]
 }

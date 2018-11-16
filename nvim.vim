@@ -112,7 +112,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox' " The One True Scheme
     " Plug 'NLKNguyen/papercolor-theme'
     " Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-    " Plug 'endel/vim-github-colorscheme'
+    Plug 'endel/vim-github-colorscheme'
 
 " SYNTAX / LINTING
     Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
