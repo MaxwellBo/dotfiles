@@ -19,7 +19,7 @@ brew cask install virtualbox
 ####################
 brew cask install java
 
-brew install yarn nvm haskell-stack scala sbt ammonite-repl leiningen nim pipenv go rustup-init
+brew install yarn nvm haskell-stack scala sbt ammonite-repl leiningen nim pipenv go rustup-init python3
 
 # The Rust community should be shot for this
 # curl https://sh.rustup.rs -sSf | sh
@@ -44,7 +44,7 @@ docker run --name redis -d redis
 #########
 # UTILS # 
 #########
-brew cask install iterm2 google-backup-and-sync google-chrome flux spotify slack keybase kitematic wireshark insomnia gitkraken microsoft-remote-desktop-beta spectacle mosh up
+brew cask install iterm2 google-backup-and-sync google-chrome flux spotify slack keybase kitematic wireshark insomnia gitkraken microsoft-remote-desktop-beta spectacle up
 
 #########
 # CLOUD #
@@ -59,7 +59,7 @@ brew cask install mactex
 #######
 # CLI # 
 #######
-brew install pandoc gitless wget ranger screenfetch tmux ripgrep lnav q jq fx gron trash tig exa ccat m-cli entr fpp fzf fd fzy tokei httpie pup loc telnet diff-so-fancy htop ncdu bat prettyping shellcheck
+brew install pandoc gitless wget ranger screenfetch tmux ripgrep lnav q jq fx gron trash tig exa ccat m-cli entr fpp fzf fd fzy tokei httpie pup loc telnet diff-so-fancy htop ncdu bat prettyping shellcheck mosh
 
 #########
 # SHELL # 
