@@ -1,6 +1,5 @@
 EditorConfig.EditorConfig
 James-Yu.latex-workshop
-daltonjorge.scala
 dbaeumer.vscode-eslint
 eamodio.gitlens
 eg2.tslint
@@ -15,3 +14,4 @@ vscodevim.vim
 yzhang.markdown-all-in-one
 ms-vsliveshare.vsliveshare
 fb-pyre-check.pyre-vscode
+streetsidesoftware.code-spell-checker
