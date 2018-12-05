@@ -10,9 +10,11 @@ precmd() {
 
 # - SCALA BUILD TOOL -
 # Tell sbt to not use any other repositories than the ones specified in ~/.sbt/repositories
-SBT_OPTS_VAL="-Dsbt.override.build.repos=true"
+# SBT_OPTS_VAL="-Dsbt.override.build.repos=true"
+export SBT_OPTS_VAL="-Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M  -Duser.timezone=GMT"
 
 export SBT_OPTS=$SBT_OPTS_VAL
+export JAVA_OPTIONS="-Xms4096m -Xmx4096m -XX:MaxMetaspaceSize=1024m"
 
 # Tell sbt launcher where to read the ivy credentials, so that is uses them when fetching new SBT versions
 export SBT_CREDENTIALS="$HOME/.ivy2/.credentials"
