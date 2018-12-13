@@ -101,5 +101,10 @@
     "editor.tabCompletion": "on",
     "tabnine.disable_file_regex": ["[.]cs$", "[.]xaml$"],
     "gitlens.hovers.currentLine.over": "line",
-    "latex-workshop.latex.autoBuild.onSave.enabled": false
+    "latex-workshop.latex.autoBuild.onSave.enabled": false,
+    "window.zoomLevel": 0,
+    "gitlens.views.repositories.files.layout": "auto",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "javascript.implicitProjectConfig.checkJs": true
 }
