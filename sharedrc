@@ -188,7 +188,7 @@ alias git-cloak="git update-index --assume-unchanged"
 alias git-uncloak="git update-index --no-assume-unchanged"
 
 # https://sethrobertson.github.io/GitFixUm/fixup.html
-alias git-peel="git reset HEAD^"
+alias git-peel="git reset HEAD~"
 
 git-make-like-remote() {
    git fetch origin && git reset --hard origin/`git rev-parse --abbrev-ref HEAD`

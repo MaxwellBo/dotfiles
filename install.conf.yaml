@@ -4,6 +4,11 @@
     # ~/.dotfiles: ''
     # ~/.vim: vim/
     # ~/.vimrc: vimrc
+    ~/.config/fish:
+      path: fish
+      create: true
+      relink: true
+      force: true
     ~/.config/nvim/init.vim:
       path: nvim.vim
       create: true
@@ -49,10 +54,6 @@
       force: true
     ~/.sharedrc:
       path: sharedrc
-      relink: true
-      force: true
-    ~/.config/fish/config.fish:
-      path: config.fish
       relink: true
       force: true
     ~/.gitconfig:
