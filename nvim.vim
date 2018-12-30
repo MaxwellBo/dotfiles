@@ -1,4 +1,13 @@
-" Note: Often commented out settings were "sane settings" included with the
+" ██╗   ██╗██╗███╗   ███╗
+" ██║   ██║██║████╗ ████║
+" ██║   ██║██║██╔████╔██║
+" ╚██╗ ██╔╝██║██║╚██╔╝██║
+"  ╚████╔╝ ██║██║ ╚═╝ ██║
+"   ╚═══╝  ╚═╝╚═╝     ╚═╝
+"
+" mbo's Vim config
+"
+" Note: Often commented out settings were recommended settings included with the
 " plugin documentation.
 
 call plug#begin('~/.vim/plugged')
