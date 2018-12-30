@@ -1,24 +1,17 @@
-" ██╗   ██╗██╗███╗   ███╗
-" ██║   ██║██║████╗ ████║
-" ██║   ██║██║██╔████╔██║
-" ╚██╗ ██╔╝██║██║╚██╔╝██║
-"  ╚████╔╝ ██║██║ ╚═╝ ██║
-"   ╚═══╝  ╚═╝╚═╝     ╚═╝
-"
-" mbo's vim config
-"
-" Note: Often commented out settings were recommended settings included 
-" with the plugin documentation.
+" Note: Often commented out settings were "sane settings" included with the
+" plugin documentation.
 
 call plug#begin('~/.vim/plugged')
-    " GIT
+
+" GIT
     Plug 'tpope/vim-fugitive' " Git wrapper
 
     " Currently disabled because of some weird bug on startup
     " Plug 'airblade/vim-gitgutter' " Git diff sidebar markers
         " set g:gitgutter_log=1
 
-    " EDITING HELP
+" EDITING HELP
+    
     Plug 'MaxwellBo/neoreader'
     let g:enable_at_startup = 0
     let g:speak_keypresses = 0
@@ -100,7 +93,7 @@ call plug#begin('~/.vim/plugged')
         map <C-b> :NERDTreeToggle<CR>
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-    " APPEARANCE
+" APPEARANCE
     Plug 'mhinz/vim-startify' " Nice startup screen
 
     " Plug 'bling/vim-airline' " Nice status bar
@@ -117,8 +110,11 @@ call plug#begin('~/.vim/plugged')
         " let g:indentLine_char = '·'
     
     Plug 'morhetz/gruvbox' " The One True Scheme
+    " Plug 'NLKNguyen/papercolor-theme'
+    " Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+    Plug 'endel/vim-github-colorscheme'
 
-    " SYNTAX / LINTING
+" SYNTAX / LINTING
     Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
     Plug 'derekwyatt/vim-scala'
     Plug 'marconilanna/REPLesent', {'rtp': 'vim/'}
@@ -131,7 +127,7 @@ call plug#begin('~/.vim/plugged')
 
     " Plug 'benekastah/neomake'
     
-    " COMPLETION
+" COMPLETION
     " Plug 'ervandew/supertab'
         " let g:SuperTabDefaultCompletionType = "<c-n>"
         " imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
@@ -145,62 +141,60 @@ call plug#begin('~/.vim/plugged')
         " let g:deoplete#enable_at_startup = 1
         " let g:python3_host_prog = "/usr/local/bin/python3"
 
-    " VIM COMPATABILITY
-    if !has('nvim') " Neovim comes with it preinstalled
+
+" VIM COMPATABILITY
+    if !has('nvim')
         Plug 'tpope/vim-sensible'
     endif
 
 call plug#end()
 
-set shell=sh " Don't use Fish shell (it's not POSIX)
-
 " VIM COMPATABILITY
-if has('nvim')
-    set listchars=tab:——,eol:¬,space:·
-    " set listchars+=space:·,trail:~,extends:>,precedes:<
-endif
+    if has('nvim')
+        set listchars=tab:——,eol:¬,space:·
+        " set listchars+=space:·,trail:~,extends:>,precedes:<
+    endif
 
-if has('nvim-0.1.5')        " True color in neovim wasn't added until 0.1.5
-    set termguicolors
-    " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
+    if has('nvim-0.1.5')        " True color in neovim wasn't added until 0.1.5
+        set termguicolors
+        " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    endif
 
-if !has('nvim')
-    set t_Co=256
-    set encoding=UTF-8
-endif
+    if !has('nvim')
+        set t_Co=256
+    endif
 
 " SEARCHING
-set ignorecase
+    set ignorecase
 
 " BELL (this mutes it)
-set visualbell
-set t_vb=
+    set visualbell
+    set t_vb=
 
 " APPEARANCE
-set number " line numbers
-set cursorline
-set showcmd
-set wildmode=full
-set colorcolumn=79
+    set number " line numbers
+    set cursorline
+    set showcmd
+    set wildmode=full
+    set colorcolumn=79
 
-" You don't know what you're missing if you don't use this.
-nmap <C-e> :e#<CR>
+    " You don't know what you're missing if you don't use this.
+    nmap <C-e> :e#<CR>
 
 " BUFFER SETTINGS
-set hidden
-set splitbelow
-set splitright
-set clipboard+=unnamed " yank to system clipboard
-set mouse=a " (a)ll modes
-set autoread " only triggers if the buffer is clean compared to filesystem
+    set hidden
+    set splitbelow
+    set splitright
+    set clipboard+=unnamed " yank to system clipboard
+    set mouse=a " (a)ll modes
+    set autoread " only triggers if the buffer is clean compared to filesystem
 
 " COLORSCHEME SETTINGS
-colorscheme gruvbox
-set background=dark
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_contrast_light='hard'
-highlight VertSplit cterm=none gui=none
-set fillchars+=vert:\ 
-" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-"
+    colorscheme gruvbox
+    set background=dark
+    let g:gruvbox_contrast_dark='hard'
+    let g:gruvbox_contrast_light='hard'
+    highlight VertSplit cterm=none gui=none
+    set fillchars+=vert:\ 
+    " highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+    "
