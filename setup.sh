@@ -44,7 +44,7 @@ docker run --name redis -d redis
 #########
 # UTILS # 
 #########
-brew cask install iterm2 google-backup-and-sync google-chrome flux spotify slack keybase kitematic wireshark insomnia gitkraken microsoft-remote-desktop-beta spectacle up
+brew cask install iterm2 google-backup-and-sync google-chrome flux spotify slack keybase kitematic wireshark insomnia gitkraken microsoft-remote-desktop-beta spectacle up eqmac dive alfred
 
 #########
 # CLOUD #
