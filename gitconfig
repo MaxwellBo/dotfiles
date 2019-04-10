@@ -1,11 +1,11 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Max Bo
-	email = max@maxbo.me
+	email = mbo@atlassian.com
 [includeIf "gitdir:~/work/"]
 	path = ~/.gitconfig_work
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/mbo/.gitignore_global
 	editor = nvim
 	pager = diff-so-fancy | less --tabs=4 -RFX # https://github.com/so-fancy/diff-so-fancy
 [commit]
@@ -39,3 +39,6 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 

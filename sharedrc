@@ -125,6 +125,13 @@ docx() { unzip -p "$1" word/document.xml | xmlextract; }
 
 docxn() { unzip -p "$1" word/document.xml | sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\}>//g; s/[^[:print:]\n]\{1,\}//g'; }
 
+
+############
+# WORKFLOW #
+############
+alias master-signup="cd ~/work/aid-signup && git checkout master && git pull && sbt run"
+alias master-account="cd ~/work/aid-signup && git checkout master && git pull && sbt run"
+
 ###############
 # FAT FINGERS #
 ###############
