@@ -131,6 +131,7 @@ docxn() { unzip -p "$1" word/document.xml | sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\
 ############
 alias master-signup="cd ~/work/aid-signup && git checkout master && git pull && sbt run"
 alias master-account="cd ~/work/aid-signup && git checkout master && git pull && sbt run"
+alias master-frontend="cd ~/work/aid-frontend && git checkout master && git pull && yarn && yarn start"
 
 ###############
 # FAT FINGERS #

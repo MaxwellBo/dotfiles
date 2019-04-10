@@ -20,7 +20,6 @@
     "editor.renderControlCharacters": true,
     "files.autoSave": "onFocusChange",
     "window.newWindowDimensions": "fullscreen",
-    "window.openFoldersInNewWindow": "on",
     "window.closeWhenEmpty": false,
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
@@ -33,7 +32,7 @@
     "workbench.editor.tabSizing": "shrink",
     "vim.easymotion": true,
     "vim.sneak": true,
-    "vim.sneakUseIgnorecaseAndSmartcase": true, 
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
     "vim.enableNeovim": false,
     "vim.neovimPath": "nvim",
     "vim.easymotionMarkerBackgroundColor": "#FFFFFF",
@@ -84,12 +83,10 @@
         "suppressWelcomeNotice": true
     },
     "latex-workshop.view.pdf.viewer": "tab",
-    "gitlens.gitExplorer.files.layout": "auto",
     "workbench.colorCustomizations": {
         "editorIndentGuide.activeBackground": "#666666"
     },
     "window.openFoldersInNewWindow": "on",
-    "gitlens.historyExplorer.enabled": true,
     "eppz-code.disableAnalytics": true,
     "csharp.referencesCodeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
@@ -99,7 +96,6 @@
     "editor.smoothScrolling": true,
     "editor.suggest.localityBonus": true,
     "editor.tabCompletion": "on",
-    "tabnine.disable_file_regex": ["[.]cs$", "[.]xaml$"],
     "gitlens.hovers.currentLine.over": "line",
     "latex-workshop.latex.autoBuild.onSave.enabled": false,
     "window.zoomLevel": 0,
