@@ -111,5 +111,8 @@
     "editor.renderWhitespace": "none",
     "editor.minimap.enabled": false,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "metals.serverVersion": "0.5.0-M1",
+    "liveshare.featureSet": "insiders",
+    "python.jediEnabled": false
 }

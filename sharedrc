@@ -104,6 +104,10 @@ if [ -x "$(command -v fd)" ]; then
    alias find='fd'
 fi
 
+if [ -x "$(command -v thefuck)" ]; then
+  eval $(thefuck --alias)
+fi
+
 alias cdw='fasd -e cd'
 
 #########
