@@ -28,7 +28,6 @@
     "workbench.colorTheme": "Gruvbox Dark Hard",
     "workbench.startupEditor": "none",
     "workbench.editor.swipeToNavigate": true,
-    "workbench.editor.enablePreview": false,
     "workbench.editor.tabSizing": "shrink",
     "vim.easymotion": true,
     "vim.sneak": true,
@@ -98,7 +97,7 @@
     "editor.tabCompletion": "on",
     "gitlens.hovers.currentLine.over": "line",
     "latex-workshop.latex.autoBuild.onSave.enabled": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "gitlens.views.repositories.files.layout": "auto",
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
@@ -108,11 +107,12 @@
     "java.configuration.checkProjectSettingsExclusions": false,
     "dotty.trace.machineId": "9c39d499-e744-40e3-9567-12d7ca37e951",
     "latex-workshop.latex.autoBuild.run": "never",
-    "editor.renderWhitespace": "none",
+    "editor.renderWhitespace": "selection",
     "editor.minimap.enabled": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "metals.serverVersion": "0.5.0-M1",
     "liveshare.featureSet": "insiders",
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    "workbench.fontAliasing": "antialiased"
 }

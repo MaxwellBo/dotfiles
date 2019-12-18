@@ -21,6 +21,9 @@ brew cask install java
 
 brew install yarn nvm haskell-stack scala sbt ammonite-repl leiningen nim pipenv go rustup-init python3
 
+brew tap unisonweb/unison
+brew install unison-language
+
 # The Rust community should be shot for this
 # curl https://sh.rustup.rs -sSf | sh
 
@@ -89,7 +92,7 @@ brew cask install font-fira-code font-dejavu-sans-mono-for-powerline
 # EDITORS #
 ###########
 
-brew cask install visual-studio-code intellij-idea sublime-text
+brew cask install visual-studio-code intellij-idea sublime-text sublime-merge
 
 brew install neovim
 pip3 install neovim pyre-check flit pipenv
