@@ -8,7 +8,7 @@ brew cask # initializes
 ####################
 # LANGUAGE TOOLING #
 ####################
-brew cask install java
+brew install --cask homebrew/cask-versions/adoptopenjdk8 
 
 brew install yarn nvm haskell-stack scala sbt ammonite-repl leiningen nim pipenv go rustup-init python3
 
