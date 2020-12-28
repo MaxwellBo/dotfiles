@@ -1,18 +1,9 @@
 ############
 # HOMEBREW #
 ############
-xcode-select --install
-
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew cask # initializes
-
-
-####################
-# CONTAINERIZATION #
-####################
-brew install docker
-brew cask install virtualbox
 
 ####################
 # LANGUAGE TOOLING #
@@ -26,7 +17,6 @@ brew install unison-language
 
 # The Rust community should be shot for this
 # curl https://sh.rustup.rs -sSf | sh
-
 
 #############
 # DATABASES #
@@ -47,7 +37,7 @@ docker run --name redis -d redis
 #########
 # UTILS # 
 #########
-brew cask install iterm2 google-backup-and-sync google-chrome flux spotify slack keybase kitematic wireshark insomnia gitkraken microsoft-remote-desktop-beta spectacle dive thefuck
+brew cask install iterm2 google-backup-and-sync google-chrome spotify slack wireshark spectacle thefuck
 
 #########
 # CLOUD #
@@ -63,12 +53,12 @@ brew cask install mactex
 # CLI # 
 #######
 brew tap jesseduffield/lazydocker
-brew install pandoc gitless wget ranger screenfetch tmux ripgrep lnav q jq fx gron trash tig exa ccat m-cli entr fpp fzf fd fzy tokei httpie pup loc telnet diff-so-fancy htop ncdu bat prettyping shellcheck mosh googler up hadolint noti bsed lazydocker
+brew install nvim fd exa ccat prettyping ncdu ripgrep
+brew install pandoc gitless wget ranger screenfetch tmux lnav q jq fx gron trash tig m-cli entr fpp fzf fzy tokei httpie pup loc telnet diff-so-fancy htop ncdu bat prettyping shellcheck mosh googler up hadolint noti bsed lazydocker
 
 #########
 # SHELL # 
 #########
-brew install zsh fish
 git clone --recursive https://github.com/MaxwellBo/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 chsh -s /bin/zsh
@@ -84,7 +74,7 @@ done
 # FONTS #
 #########
 
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 
 brew cask install font-fira-code font-dejavu-sans-mono-for-powerline
 
@@ -92,14 +82,13 @@ brew cask install font-fira-code font-dejavu-sans-mono-for-powerline
 # EDITORS #
 ###########
 
-brew cask install visual-studio-code intellij-idea sublime-text sublime-merge
+brew install --cask visual-studio-code intellij-idea
 
 brew install neovim
 pip3 install neovim pyre-check flit pipenv
 
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 nvim +PlugClean +PlugInstall +qa
-
 

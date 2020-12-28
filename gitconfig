@@ -42,3 +42,5 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+[http]
+	postBuffer = 524288000

@@ -1,7 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
     "editor.fontSize": 17,
-    "editor.fontFamily": "DejaVu Sans Mono for Powerline",
     "editor.rulers": [
         80,
         88,
@@ -15,7 +14,6 @@
         "strings": true
     },
     "editor.stablePeek": true,
-    "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "editor.renderControlCharacters": true,
     "files.autoSave": "onFocusChange",
@@ -25,9 +23,8 @@
     "terminal.integrated.fontFamily": "DejaVu Sans Mono for Powerline",
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
     "workbench.startupEditor": "none",
-    "workbench.editor.swipeToNavigate": true,
     "workbench.editor.tabSizing": "shrink",
     "vim.easymotion": true,
     "vim.sneak": true,
@@ -36,12 +33,6 @@
     "vim.neovimPath": "nvim",
     "vim.easymotionMarkerBackgroundColor": "#FFFFFF",
     "vim.easymotionMarkerForegroundColorOneChar": "#aa0000",
-    "vim.easymotionMarkerForegroundColorTwoChar": "#00aa00",
-    "vim.easymotionMarkerFontSize": "17",
-    "vim.easymotionMarkerWidthPerChar": 14,
-    "vim.easymotionMarkerHeight": 20,
-    "vim.easymotionMarkerYOffset": 15,
-    "vim.easymotionMarkerFontFamily": "DejaVu Sans Mono for Powerline",
     "[markdown]": {
         "editor.wordWrap": "bounded",
         "editor.wordWrapColumn": 80,
@@ -86,8 +77,6 @@
         "editorIndentGuide.activeBackground": "#666666"
     },
     "window.openFoldersInNewWindow": "on",
-    "eppz-code.disableAnalytics": true,
-    "csharp.referencesCodeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.enabled": false,
     "gitlens.hovers.currentLine.enabled": false,
@@ -101,18 +90,18 @@
     "gitlens.views.repositories.files.layout": "auto",
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
-    "javascript.implicitProjectConfig.checkJs": true,
     "workbench.activityBar.visible": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "java.configuration.checkProjectSettingsExclusions": false,
     "dotty.trace.machineId": "9c39d499-e744-40e3-9567-12d7ca37e951",
     "latex-workshop.latex.autoBuild.run": "never",
     "editor.renderWhitespace": "selection",
     "editor.minimap.enabled": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "metals.serverVersion": "0.5.0-M1",
-    "liveshare.featureSet": "insiders",
-    "python.jediEnabled": false,
-    "workbench.fontAliasing": "antialiased"
+    "workbench.fontAliasing": "antialiased",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.fontFamily": "'DejaVu Sans Mono for Powerline', Menlo, Monaco, 'Courier New', monospace",
+    "workbench.editorAssociations": [
+    
+    ]
 }
