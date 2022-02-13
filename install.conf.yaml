@@ -1,14 +1,6 @@
 - clean: ['~']
 
 - link:
-    # ~/.dotfiles: ''
-    # ~/.vim: vim/
-    # ~/.vimrc: vimrc
-    ~/.config/fish:
-      path: fish
-      create: true
-      relink: true
-      force: true
     ~/.config/nvim/init.vim:
       path: nvim.vim
       create: true
@@ -20,14 +12,6 @@
       force: true
     ~/.ideavimrc:
       path: ideavimrc
-      relink: true
-      force: true
-    # ~/.spacemacs:
-    #   path: spacemacs
-    #   relink: true
-    #   force: true
-    ~/.emacs:
-      path: emacs
       relink: true
       force: true
     ~/.tmux.conf:
@@ -59,15 +43,6 @@
       path: gitconfig_work
       relink: true
       force: true
-    ~/.git-commit-template:
-      path: git-commit-template
-      relink: true
-      force: true
-    ~/.wtf/config.yml:
-      path: wtf.config.yml 
-      relink: true
-      force: true
-
 
 - shell:
   - [git submodule update --remote --merge, Installing submodules]
