@@ -30,11 +30,6 @@
       path: emacs
       relink: true
       force: true
-    ~/Library/Application Support/Code/User/settings.json:
-      path: VSCode/settings.json
-      create: true
-      relink: true
-      force: true
     ~/.tmux.conf:
       path: tmux.conf
       relink: true

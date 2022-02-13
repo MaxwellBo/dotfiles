@@ -82,6 +82,8 @@ brew cask install font-fira-code font-dejavu-sans-mono-for-powerline
 # EDITORS #
 ###########
 
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 brew install --cask visual-studio-code intellij-idea
 
 brew install neovim

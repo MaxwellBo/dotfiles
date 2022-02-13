@@ -13,8 +13,6 @@
 call plug#begin('~/.vim/plugged')
 
 " GIT
-    Plug 'tpope/vim-fugitive' " Git wrapper
-
     " Currently disabled because of some weird bug on startup
     " Plug 'airblade/vim-gitgutter' " Git diff sidebar markers
         " set g:gitgutter_log=1
