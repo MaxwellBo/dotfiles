@@ -36,8 +36,6 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'ap/vim-css-color' " Hex code colour highlighting (fast fork)
 
-    " Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " HTML tag expansion
-
     Plug 'Raimondi/delimitMate' " Auto close brackets
 
     Plug 'terryma/vim-multiple-cursors' " `<C-n>` TODO: Make this <C-d>
@@ -83,18 +81,10 @@ call plug#begin('~/.vim/plugged')
     " <operator>Z<char><char>	Perform <operator> backward to the first occurence of <char><char>
 
 " WORKFLOW SUPPORT
-    " Plug 'cloudhead/neovim-fuzzy' " Fast file open
-    "     nnoremap <C-p> :FuzzyOpen<CR>
-
     Plug 'srstevenson/vim-picker'
         nnoremap <C-p> :PickerTabedit<CR>
 
     Plug 'airblade/vim-rooter' " Autoset working directory in the presence of project files
-
-    " Plug 'ctrlpvim/ctrlp.vim' " Fast file open
-    "     let g:ctrlp_match_window = 'bottom,order:ttb'
-    "     let g:ctrlp_switch_buffer = 0
-    "     let g:ctrlp_working_path_mode = 0
 
     Plug 'scrooloose/nerdtree' " File navigation sidebar
         map <C-b> :NERDTreeToggle<CR>
@@ -102,11 +92,6 @@ call plug#begin('~/.vim/plugged')
 
 " APPEARANCE
     Plug 'mhinz/vim-startify' " Nice startup screen
-
-    " Plug 'bling/vim-airline' " Nice status bar
-    "     set noshowmode
-    "     let g:airline_powerline_fonts = 1
-        " set guifont=Liberation\ Mono\ for\ Powerline\ 10
 
     Plug 'itchyny/lightline.vim'
     " let g:lightline = {
@@ -133,23 +118,6 @@ call plug#begin('~/.vim/plugged')
         " set expandtab
 
     " Plug 'benekastah/neomake'
-    
-" COMPLETION
-    " Plug 'ervandew/supertab'
-        " let g:SuperTabDefaultCompletionType = "<c-n>"
-        " imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
-        " ^ Accepts highlighted option on Enter, rather than inserting newline
-        " inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-
-    " Plug 'Valloric/YouCompleteMe' ", { 'for': ['c', 'cpp'] }
-        " Plug 'rdnetto/YCM-Generator'
-    
-    " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-        " let g:deoplete#enable_at_startup = 1
-        " let g:python3_host_prog = "/usr/local/bin/python3"
-    
-    Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-
 
 " VIM COMPATABILITY
     if !has('nvim')
@@ -161,7 +129,6 @@ call plug#end()
 " VIM COMPATABILITY
     if has('nvim')
         set listchars=tab:——,eol:¬,space:·
-        " set listchars+=space:·,trail:~,extends:>,precedes:<
     endif
 
     if has('nvim-0.1.5')        " True color in neovim wasn't added until 0.1.5
