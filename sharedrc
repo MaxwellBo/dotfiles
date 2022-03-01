@@ -78,10 +78,6 @@ if [ -x "$(command -v nvim)" ]; then
    alias vim="nvim"
 fi
 
-if [ -x "$(command -v emacs-25.2)" ]; then
-   alias emacs=emacs-25.2
-fi
-
 if [ -x "$(command -v ccat)" ]; then
    alias cat='ccat --bg="dark"'
 fi
@@ -114,10 +110,6 @@ alias cdw='fasd -e cd'
 # UTILS #
 #########
 
-alias subf="subl --command toggle_full_screen" # (sub)lime (f)ullscreen
-alias begone-thot="rm -rf"
-alias ydsh="yarn run dev-server-hot"
-
 github-clone() {
    git clone "https://github.com/MaxwellBo/$1"
 }
@@ -130,13 +122,6 @@ docx() { unzip -p "$1" word/document.xml | xmlextract; }
 docxn() { unzip -p "$1" word/document.xml | sed -e 's/<\/w:p>/\n/g; s/<[^>]\{1,\}>//g; s/[^[:print:]\n]\{1,\}//g'; }
 
 
-############
-# WORKFLOW #
-############
-alias master-signup="cd ~/work/aid-signup && git checkout master && git pull && sbt run"
-alias master-account="cd ~/work/aid-signup && git checkout master && git pull && sbt run"
-alias master-frontend="cd ~/work/aid-frontend && git checkout master && git pull && yarn && yarn start"
-
 ###############
 # FAT FINGERS #
 ###############
@@ -144,14 +129,6 @@ alias master-frontend="cd ~/work/aid-frontend && git checkout master && git pull
 alias ripgrep="rg"
 alias rgrep="rg"
 alias rgl="rg --fixed-strings" # Treat the pattern as a literal string instead of a regular expression
-alias clip-copy="pbcopy"
-alias clip-paste="pbpaste"
-
-##########
-# FIXES ##
-##########
-
-# unalias mysql
 
 ##########
 # PYTHON #
@@ -162,22 +139,9 @@ alias workon="source .venv/bin/activate"
 alias workoff="deactivate"
 alias makevenv="python3 -m venv .venv && source .venv/bin/activate"
 
-##############
-# CONTAINERS #
-##############
-
-alias nots="jupyter notebook --script"
-alias notc="jupyter nbconvert"
-
 #######
 # GIT #
 #######
-
-# Git commit all prime
-alias gcap="git commit --all --verbose"
-
-
-alias git-precommit="git diff --cached --diff-algorithm=minimal -w"
 
 # http://gggritso.com/human-git-aliases
 alias git-branches="git branch -a"
@@ -211,37 +175,3 @@ git-rebase-off-dev() {
 }
 
 alias git-diff-inline="git diff --word-diff=color"
-
-#######
-# GCC #
-#######
-
-alias gcc-uq="gcc -Wall -pedantic -std=gnu99"
-
-# http://stackoverflow.com/questions/3375697/useful-gcc-flags-for-c
-alias gcc-norm="
-clang \
--Wall \
--Wextra \
--Wpedantic \
--Wshadow \
--Wstrict-prototypes \
--Wmisleading-indentation" # (c)ompile (C) (n)ormal (f)lags
-
-alias gcc-strict="
-ccwf \
--Wundef \
--Wfloat-equal \
--Wpointer-arith \
--Wcast-align \
--Wwrite-strings \
--Waggregate-return" # (c)ompile (C) (s)trict (f)lags
-
-# slurm cluster stuff
-alias sqall="squeue"
-alias sqme="squeue -u s1234567"
-alias sqinfo="sinfo --all"
-alias sqrun1="srun --cpus-per-task=1 --pty bash"
-alias sqrun2="srun --cpus-per-task=2 --pty bash"
-alias sqrun3="srun --cpus-per-task=3 --pty bash"
-alias sqrun4="srun --cpus-per-task=4 --pty bash"

@@ -38,7 +38,7 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'Raimondi/delimitMate' " Auto close brackets
 
-    Plug 'terryma/vim-multiple-cursors' " `<C-n>` TODO: Make this <C-d>
+    " Plug 'terryma/vim-multiple-cursors' " `<C-n>` TODO: Make this <C-d>
 
     Plug 'tommcdo/vim-exchange' " Exchange lines with `cx`, and 'X' in visual mode
     " cx - On the first use, define the first {motion} to exchange. On the second use, define the second {motion} and perform the exchange.
@@ -65,7 +65,7 @@ call plug#begin('~/.vim/plugged')
     " y s <motion> <desired char>	Surround something with something using motion (as in 'you surround')
     " S <desired char>	Surround when in visual modes (surrounds full selection)
 
-    Plug 'easymotion/vim-easymotion'
+    " Plug 'easymotion/vim-easymotion'
     " <leader><leader><motion>
 
     Plug 'michaeljsmith/vim-indent-object'
@@ -73,7 +73,7 @@ call plug#begin('~/.vim/plugged')
     " <operator>ai	This indentation level and the line above (think if statements in Python)
     " <operator>aI	This indentation level, the line above, and the line after (think if statements in C/C++/Java/etc)
 
-    Plug 'justinmk/vim-sneak'
+    " Plug 'justinmk/vim-sneak'
     let g:sneak#label = 1
     " s<char><char>	Move forward to the first occurence of <char><char>
     " S<char><char>	Move backward to the first occurence of <char><char>
@@ -104,12 +104,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox' " The One True Scheme
     " Plug 'NLKNguyen/papercolor-theme'
     " Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-    Plug 'endel/vim-github-colorscheme'
+    " Plug 'endel/vim-github-colorscheme'
 
 " SYNTAX / LINTING
     Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim.
-    Plug 'derekwyatt/vim-scala'
-    Plug 'marconilanna/REPLesent', {'rtp': 'vim/'}
+    " Plug 'derekwyatt/vim-scala'
+    " Plug 'marconilanna/REPLesent', {'rtp': 'vim/'}
 
     Plug 'tpope/vim-sleuth' "automatically adjusts 'shiftwidth' and 'expandtab' heuristically
         set tabstop=4
