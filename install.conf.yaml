@@ -18,11 +18,6 @@
       path: tmux.conf
       relink: true
       force: true
-    ~/.ssh/config:
-      path: ssh
-      create: true
-      relink: true
-      force: true
     ~/.bash_profile:
       path: bash_profile
       relink: true
