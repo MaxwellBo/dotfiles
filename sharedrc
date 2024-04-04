@@ -3,16 +3,14 @@
 # ENV #
 #######
 
+export CANVA_REPO=~/work/canva
+export DSL_REPO_DIR="/Users/mjbo/work/bulk-http-dsl"
+export CANVA_REPO_DIR="/Users/mjbo/work/canva"
+
 precmd() {
   # sets the tab title to current dir
   echo -ne "\e]1;${PWD##*/}\a"
 }
-
-# - SCALA BUILD TOOL -
-# Tell sbt to not use any other repositories than the ones specified in ~/.sbt/repositories
-# SBT_OPTS_VAL="-Dsbt.override.build.repos=true"
-export SBT_OPTS_VAL="-Xmx2G -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xss2M  -Duser.timezone=GMT"
-export JAVA_OPTIONS_VAL="-Xms4096m -Xmx4096m -XX:MaxMetaspaceSize=1024m"
 
 export SBT_OPTS=$SBT_OPTS_VAL
 export JAVA_OPTIONS=$JAVA_OPTIONS_VAL
@@ -66,8 +64,8 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 # DROP-INS #
 ############
 
-if [ -x "$(command -v exa)" ]; then
-   alias ls="exa"
+if [ -x "$(command -v eza)" ]; then
+   alias ls="eza"
    # sane default "exa -bghHliS"
    alias lsa="ls --all --long --binary --header --time modified --git"
 else
@@ -175,3 +173,6 @@ git-rebase-off-dev() {
 }
 
 alias git-diff-inline="git diff --word-diff=color"
+
+
+
