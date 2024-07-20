@@ -2,6 +2,7 @@
 #######
 # ENV #
 #######
+alias pts="cd ~/work/canva/web/src/base/proto"
 
 export CANVA_REPO=~/work/canva
 export DSL_REPO_DIR="/Users/mjbo/work/bulk-http-dsl"
@@ -14,9 +15,6 @@ precmd() {
 
 export SBT_OPTS=$SBT_OPTS_VAL
 export JAVA_OPTIONS=$JAVA_OPTIONS_VAL
-
-# Tell sbt launcher where to read the ivy credentials, so that is uses them when fetching new SBT versions
-export SBT_CREDENTIALS="$HOME/.ivy2/.credentials"
 
 alias onproxy='export JAVA_OPTIONS="$JAVA_OPTIONS_VAL -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=8888 -Dorg.asynchttpclient.useProxySelector=true"'
 alias offproxy='JAVA_OPTIONS="$JAVA_OPTIONS_VAL"'
