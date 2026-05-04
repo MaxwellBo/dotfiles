@@ -2,12 +2,6 @@
 #######
 # ENV #
 #######
-alias pts="cd ~/work/canva/web/src/base/proto"
-
-export CANVA_REPO=~/work/canva
-export DSL_REPO_DIR="/Users/mjbo/work/bulk-http-dsl"
-export CANVA_REPO_DIR="/Users/mjbo/work/canva"
-
 precmd() {
   # sets the tab title to current dir
   echo -ne "\e]1;${PWD##*/}\a"

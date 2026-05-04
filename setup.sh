@@ -8,7 +8,6 @@ brew install git
 # FONTS #
 #########
 
-brew tap homebrew/cask-fonts
 brew install --cask font-fira-code font-dejavu-sans-mono-for-powerline
 
 ################
@@ -16,7 +15,7 @@ brew install --cask font-fira-code font-dejavu-sans-mono-for-powerline
 ################
 
 brew install nvim
-brew install --cask iterm2 google-chrome spotify slack rectangle visual-studio-code jetbrains-toolbox 
+brew install --cask iterm2 google-chrome spotify slack rectangle cursor jetbrains-toolbox 
 
 defaults write -g ApplePressAndHoldEnabled -bool false
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
